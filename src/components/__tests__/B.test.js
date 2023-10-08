@@ -1,6 +1,8 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { render, shallow, mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
+configure({adapter: new Adapter()});
 describe('<B />', () => {
   let B;
   let makeShallowSubject;

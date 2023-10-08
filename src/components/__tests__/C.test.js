@@ -1,6 +1,8 @@
 import React from 'react';
-import { render } from 'enzyme';
+import { render, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
+configure({adapter: new Adapter()});
 describe('<C />', () => {
   let C;
   let makeSubject;

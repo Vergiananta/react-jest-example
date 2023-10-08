@@ -1,8 +1,10 @@
 // jest.mock('../B', () => 'B');
 
 import React, { Component } from 'react';
-import { render, shallow, mount } from 'enzyme';
+import { render, shallow, mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
+configure({adapter: new Adapter()});
 describe('<A />', () => {
   let makeSubject;
   let makeShallowSubject;
